@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+* {
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+  
+body {
+    padding: 0;
+    margin: 0;
+    background: repeating-linear-gradient(to right, #d8dfe2, #0d56aa);
+    border-radius: 20%;
+}
+  
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+  
+.calculator-grid > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid rgb(121, 69, 69);
+    border-radius: 5%;
+    outline: none;
+    background-color: rgba(179, 195, 212, 0.288);
+    border-radius: 10%;
+    margin: 4px;
+}
+  
+.calculator-grid > button:hover {
+    background-color: rgba(255, 255, 255, 0.596);
+}
+  
+.span {
+    grid-column: span 2;
+}
+  
+.output {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    border-radius: 5%;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+  
+.output .previous-operand {
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+}
+  
+.output .current-operand {
+    color: rgb(255, 255, 255);
+    font-size: 2.5rem;
+}
+
+
+@media only screen and (max-width: 700px) {
+  body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+	position: absolute;
+    background-color: #0d56aa;
+  }
+}
